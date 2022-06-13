@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Node2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 67, 66 )
@@ -10,9 +10,6 @@ extents = Vector2( 67, 66 )
 [sub_resource type="CanvasItemMaterial" id=3]
 
 [node name="World" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 580, 286 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 247, 211 )
@@ -38,3 +35,6 @@ polygon = PoolVector2Array( 909, 472, 719, 505, 523, 577, 245, 509, 70, 505, 132
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2/CollisionPolygon2D"]
 polygon = PoolVector2Array( 6, -42, 1021, -30, 1019, 678, 2, 671, 81, 500, 255, 505, 528, 572, 717, 505, 905, 472, 949, 199, 931, 80, 624, 99, 453, 72, 107, 122, 133, 385, 5, 668 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 522, 301 )

@@ -10,6 +10,7 @@ export (float) var xBounds;
 export (float) var yBounds;
 var velocity = Vector2()
 var rotationDirection = 0
+onready var animationPlayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,6 +31,11 @@ func GetInput():
 		velocity.y +=1
 	velocity = velocity.normalized() * speed
 	
+	if Input.is_action_pressed("ui_select"):
+		animationPlayer.play("Attack") 
+	else:
+			animationPlayer.stop()
+	
 	
 
 
@@ -39,5 +45,8 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 	
 
-		
-	
+
+
+func _on_SwordHit_area_entered(area):
+	if area.is_in_group("hurtbox"):
+		area.take_damage()

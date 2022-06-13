@@ -1,2 +1,2 @@
-﻿37201
-/home/jonas/Godot_v3.4.4-stable_mono_x11_64/Godot_v3.4.4-stable_mono_x11.64
+﻿40379
+/snap/gd-godot-engine-mono-snapcraft/21/godot-engine-mono/godot-engine-mono
