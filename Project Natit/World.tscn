@@ -63,3 +63,6 @@ position = Vector2( 384, 320 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 432, 264 )
+
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
