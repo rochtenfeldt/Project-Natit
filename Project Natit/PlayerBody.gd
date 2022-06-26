@@ -21,6 +21,7 @@ func GetInput():
 	rotationDirection = 0
 	velocity = Vector2()
 	
+	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("ui_left"):
