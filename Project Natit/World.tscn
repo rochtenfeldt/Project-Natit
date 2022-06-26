@@ -1,91 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Materials/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 580, 286 )
-
-[node name="Icon" type="Sprite" parent="."]
-position = Vector2( 390, 357 )
-texture = ExtResource( 2 )
-=======
-[gd_scene load_steps=5 format=2]
-=======
-[gd_scene load_steps=8 format=2]
->>>>>>> origin/Enemy-script
-
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://World.gd" type="Script" id=2]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 67, 66 )
-
-[sub_resource type="GradientTexture" id=1]
-
-[sub_resource type="CanvasItemMaterial" id=3]
-
-[sub_resource type="Curve2D" id=4]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 384, 320, 0, 0, 0, 0, 704, 320, 0, 0, 0, 0, 704, 448, 0, 0, 0, 0, 384, 320 )
-}
-
 [node name="World" type="Node2D"]
-script = ExtResource( 2 )
-enemy_scene = ExtResource( 3 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 247, 211 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 67, 66 )
-shape = SubResource( 2 )
-
-[node name="TextureRect5" type="TextureRect" parent="StaticBody2D"]
-margin_left = -1.0
-margin_top = 1.0
-margin_right = 133.0
-margin_bottom = 133.0
-texture = SubResource( 1 )
-expand = true
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-material = SubResource( 3 )
-position = Vector2( -4, 7 )
-polygon = PoolVector2Array( 909, 472, 719, 505, 523, 577, 245, 509, 70, 505, 132, 384, 105, 115, 304, 89, 446, 72, 623, 100, 950, 78, 1020, -34, 6, -44, 5, 670, 1015, 674, 1024, -33, 932, 81, 952, 204 )
-
-[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2/CollisionPolygon2D"]
-polygon = PoolVector2Array( 6, -42, 1021, -30, 1019, 678, 2, 671, 81, 500, 255, 505, 528, 572, 717, 505, 905, 472, 949, 199, 931, 80, 624, 99, 453, 72, 107, 122, 133, 385, 5, 668 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 522, 301 )
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-
-[node name="EnemyTimer" type="Timer" parent="."]
-wait_time = 0.5
-
-[node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[node name="EnemyPath" type="Path2D" parent="."]
-curve = SubResource( 4 )
-
-[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemyPath"]
-position = Vector2( 384, 320 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 432, 264 )
+position = Vector2( 317, 291 )
 
-[connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
-[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
->>>>>>> origin/Enemy-script
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 291 )

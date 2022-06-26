@@ -11,12 +11,8 @@ config_version=4
 [application]
 
 config/name="Project Natit"
-<<<<<<< HEAD
-run/main_scene="res://Materials/Player.tscn"
-=======
-run/main_scene="res://World.tscn"
->>>>>>> origin/main
 config/icon="res://icon.png"
+<<<<<<<HEADrun/main_scene="res://Materials/Player.tscn"
 
 [physics]
 
