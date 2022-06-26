@@ -1,4 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Materials/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 580, 286 )
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 390, 357 )
+texture = ExtResource( 2 )
+=======
+[gd_scene load_steps=5 format=2]
+=======
 [gd_scene load_steps=8 format=2]
+>>>>>>> origin/Enemy-script
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World.gd" type="Script" id=2]
@@ -47,6 +66,9 @@ polygon = PoolVector2Array( 6, -42, 1021, -30, 1019, 678, 2, 671, 81, 500, 255, 
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 522, 301 )
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -66,3 +88,4 @@ position = Vector2( 432, 264 )
 
 [connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+>>>>>>> origin/Enemy-script
